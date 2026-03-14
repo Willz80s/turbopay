@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
-const knex = require('./src/database/knex');
+const knex = require('../database/knex');
 
 async function registerUser(email, password) {
   return await knex.transaction(async (trx) => {
